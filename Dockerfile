@@ -8,4 +8,5 @@ LABEL maintainer="Liang-Chi Hsieh <viirya@gmail.com>"
 RUN apk add git
 
 COPY "entrypoint" "/entrypoint"
+RUN chmod +x /entrypoint
 ENTRYPOINT ["/entrypoint"]

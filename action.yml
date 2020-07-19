@@ -1,0 +1,15 @@
+name: 'Check GitHub Actions log'
+description: ''
+author: 'Liang-Chi Hsieh'
+branding:
+  icon: arrow-right-circle
+  color: gray-dark
+inputs:
+  logFile:
+    description: 'The path to log file'
+    required: true
+runs:
+    using: 'docker'
+    image: 'Dockerfile'
+    args:
+      - ${{ inputs.tag }}

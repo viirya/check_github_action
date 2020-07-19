@@ -1,0 +1,15 @@
+#!/bin/bash
+
+
+if [[ $1 != '' ]]
+then
+  LOGFILE=$1   
+  echo "Log file path is $LOGFILE"
+
+  tail -f $LOGFILE| while read LINE; do
+    echo $LINE
+  done
+
+else
+  echo "check_github_action requires log file path as input arg"
+fi
